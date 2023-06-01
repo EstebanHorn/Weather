@@ -1,13 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  }
+
+
+#img-shadow {
+  filter: drop-shadow(-4px 2px 15px #141414);
+}
+#img-shadow-2 {
+  filter: drop-shadow(-2px 1px 4px #141414);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
