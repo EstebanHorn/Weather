@@ -9,10 +9,8 @@ module.exports = {
         DEFAULT: '1px',
         'small': '1px',
       },
-      backgroundImage: {
-      'sun-bg': "url('/src/assets/minimal-scenery-sunset.jpg')",
-    },},
+     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 }
 

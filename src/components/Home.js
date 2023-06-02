@@ -202,6 +202,7 @@ function Home() {
         </div>
       </div>
       <Week city={weather.name}/>
+      <footer className="absolute md:top-2 md:right-12 top-1 right-1 text-[8px] md:text-sm">» Designed & Built by Esteban Horn «</footer>
     </div>
   );
 }

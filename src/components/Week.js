@@ -79,9 +79,10 @@ function Week(props) {
       </div>
     );
   }
-
   return (
-    <div className="shadow-xl md:bg-black md:bg-opacity-20 md:gap-0 md:mx-4 md:rounded-xl gap-1 h-[%40] mb-5 p-1 md:p-0 grid md:grid-cols-5 grid-cols-3 md:divide-x-[0.5px]">
+    <div
+      className={`md:grid-cols-${weather.length} md:grid-cols-6 shadow-xl md:bg-black md:bg-opacity-20 md:gap-0 md:mx-4 md:rounded-xl gap-1 h-[40%] mb-5 p-1 md:p-0 grid grid-cols-3 md:divide-x-[0.5px]`}
+    >
       {weather.map((data, index) => (
         <div
           key={index}
@@ -103,7 +104,9 @@ function Week(props) {
             alt={`icon ${data.icon}`}
             className="h-20 m-2 drop-shadow-2xl"
           />
-          <div className="md:text-base text-xs">Precipitaciones: {data.precip} mm</div>
+          <div className="md:text-base text-xs">
+            Precipitaciones: {data.precip} mm
+          </div>
           <div className="md:text-base text-xs">Nubosidad: {data.clouds}%</div>
           <div className="md:text-base text-xs">Humedad: {data.humidity}%</div>
           <div className="md:text-base text-xs">
