@@ -65,6 +65,21 @@ function Week(props) {
     fetchData();
   }, [cityName]);
 
+  const gridStyle = (weather) => {
+    const screenWidth = window.innerWidth;
+    console.log(screenWidth);
+
+    if (screenWidth < 1000) {
+      return {
+        gridTemplateColumns: `repeat(3, 1fr)`,
+      };
+    } else {
+      return {
+        gridTemplateColumns: `repeat(${weather.length}, 1fr)`,
+      };
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center">
@@ -81,8 +96,10 @@ function Week(props) {
   }
   return (
     <div
-      className={`md:grid-cols-${weather.length} md:grid-cols-6 shadow-xl md:bg-black md:bg-opacity-20 md:gap-0 md:mx-4 md:rounded-xl gap-1 h-[40%] mb-5 p-1 md:p-0 grid grid-cols-3 md:divide-x-[0.5px]`}
+      className={`shadow-xl md:bg-black md:bg-opacity-20 md:gap-0 md:mx-4 md:rounded-xl gap-1 h-[40%] mb-5 p-1 md:p-0 grid  md:divide-x-[0.5px]`}
+      style={gridStyle(weather)}
     >
+      {console.log(weather)}
       {weather.map((data, index) => (
         <div
           key={index}
